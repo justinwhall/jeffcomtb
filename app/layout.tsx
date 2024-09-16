@@ -20,6 +20,10 @@ export default function RootLayout({ children }: { children: any }) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
+        <meta name="description" content={metadata.description} />
+        <title>{metadata.title}</title>
+        {/* og image tag */}
+        <meta property="og:image" content="https://jeffcomtb.club/og.jpg" />
       </head>
       <body>
         <MantineProvider defaultColorScheme="dark" theme={theme}>{children}</MantineProvider>
