@@ -3,5 +3,7 @@
 import { createTheme } from '@mantine/core';
 
 export const theme = createTheme({
-  /* Put your mantine theme override here */
+  fontSizes: {
+    md: '20px', // Default text size
+  },
 });

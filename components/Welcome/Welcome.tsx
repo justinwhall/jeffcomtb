@@ -5,18 +5,26 @@ export function Welcome() {
   return (
     <>
       <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
+        JeffCo{' '}
+        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink.7', to: 'cyan.5' }}>
+          Mountain Bikers
         </Text>
       </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit page.tsx file.
+      <Text ta="center" size="xl" maw={600} mx="auto" mt="xl">
+      Hi! We're Jefferson County Mountain Bikers.
+      We're an informal group of mountain bikers who ride every Tuesday
+      night from mid-March to early November. Most rides are in Golden, CO,
+      but we also ride in other areas relatively close to Denver, CO.
+      Find our  {' '}
+      <Anchor href="#rides" size="lg">
+      ride schedule
+      </Anchor>
+      {' '}
+      below or read more about us
+      {' '}
+      <Anchor href="#faq" size="lg">
+      here
+      </Anchor>.
       </Text>
     </>
   );

@@ -1,0 +1,9 @@
+.event {
+  margin-bottom: 30rem;
+  background-color: var(--mantine-color-dark-6);
+}
+
+.description a {
+  color: var(--mantine-color-pink-3);
+  font-weight: 800;
+}

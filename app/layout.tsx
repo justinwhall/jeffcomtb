@@ -1,19 +1,20 @@
 import '@mantine/core/styles.css';
+import './global.css';
 
 import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'JeffCo Mountain Bikers | Golden, CO, Jefferson County, CO | Mountain Bike Groupe Rides',
+  description: 'Golden, CO, Jefferson, CO and Denver, CO mountain bike group rides. Join us for weekly group rides in the Golden, CO area.',
 };
 
 export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en">
       <head>
-        <ColorSchemeScript />
+        <ColorSchemeScript defaultColorScheme="dark" />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider defaultColorScheme="dark" theme={theme}>{children}</MantineProvider>
       </body>
     </html>
   );
