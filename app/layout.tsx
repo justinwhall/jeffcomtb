@@ -6,7 +6,7 @@ import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
 
 export const metadata = {
-  title: 'JeffCo Mountain Bikers | Golden, CO, Jefferson County, CO | Mountain Bike Groupe Rides',
+  title: 'JeffCo Mountain Bikers | Golden, CO, Jefferson County, CO | Mountain Bike Group Rides',
   description: 'Golden, CO, Jefferson, CO and Denver, CO mountain bike group rides. Join us for weekly group rides in the Golden, CO area.',
 };
 
