@@ -7,9 +7,10 @@ export async function Events() {
   const events = await res.json();
 
   const parseDescription = (description:string) => {
-    const regex = /https:\/\/jeffcomtb\.club\/[\w\-?=&#.%]*/;
+    const regex = /https:\/\/jeffcomtb\.club\/ride\/[\w\-?=&#.%]*/;
     const match = description.match(regex);
     const link = match ? match[0] : '';
+
     const descriptionWithLink = description.replace(link, `<a href="${link}" target="_blank">Directions</a>`);
     return descriptionWithLink.replace(/\n/g, '<br />');
   };
