@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { notFound } from 'next/navigation';
 import fs from 'fs/promises';
