@@ -7,7 +7,7 @@ export async function Events() {
   const events = await res.json();
 
   const parseDescription = (description:string) => {
-    const regex = /https:\/\/jeffcomtb\.club\/ride\/[\w\-?=&#.%]*/;
+    const regex = /https:\/\/jeffcomtb\.club\/directions\/[\w\-?=&#.%]*/;
     const match = description.match(regex);
     const link = match ? match[0] : '';
 
