@@ -3,6 +3,7 @@ import './global.css';
 
 import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import classes from './Layout.module.css';
 import { theme } from '../theme';
 
 export const metadata = {
@@ -26,7 +27,11 @@ export default function RootLayout({ children }: { children: any }) {
         <meta property="og:image" content="https://jeffcomtb.club/og.jpg" />
       </head>
       <body>
-        <MantineProvider defaultColorScheme="dark" theme={theme}>{children}</MantineProvider>
+        <MantineProvider defaultColorScheme="dark" theme={theme}>
+        <div className={classes.container}>
+          {children}
+        </div>
+        </MantineProvider>
       </body>
     </html>
   );
