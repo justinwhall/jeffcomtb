@@ -5,6 +5,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import ReactMarkdown from 'react-markdown';
 import { Title } from '@mantine/core';
+import Link from 'next/link';
 
 async function getMarkdownContent(slug) {
   const filePath = path.join(process.cwd(), 'ride-descriptions', `${slug}.md`);
@@ -36,6 +37,7 @@ export default async function DynamicMarkdownRenderer({ params }) {
 
   return (
     <div className="markdown-content">
+        <Link href="/#all-rides">Back</Link>
         <Title ta="center" size={45} c="cyan" mt={30}>
           {title}
         </Title>
