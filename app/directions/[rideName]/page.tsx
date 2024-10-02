@@ -7,6 +7,7 @@ const REDIRECTS = {
   'three-sisters': "https://www.google.com/maps/place/39%C2%B038'08.3%22N+105%C2%B019'50.8%22W/@39.63564,-105.33077,17z/data=!3m1!4b1!4m4!3m3!8m2!3d39.63564!4d-105.33077?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D",
   'virginia-canyon': 'https://www.google.com/maps/dir//shelly+quinn+ball+field/@39.7207042,-105.6494323,10z/data=!4m8!4m7!1m0!1m5!1m1!1s0x876ba350abe86eef:0xae762b3aac498d93!2m2!1d-105.4943713!2d39.7410038?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D',
   'elk-meadow-bergan': 'https://www.google.com/maps/dir//Lewis+Ridge+Rd,+Colorado+80439/@39.6629405,-105.3474481,17z/data=!4m18!1m8!3m7!1s0x876b9eefa0003aeb:0x7657e8f0de2b5710!2sLewis+Ridge+Rd,+Colorado+80439!3b1!8m2!3d39.6629405!4d-105.3448732!16s%2Fg%2F1vc8293v!4m8!1m0!1m5!1m1!1s0x876b9eefa0003aeb:0x7657e8f0de2b5710!2m2!1d-105.3448732!2d39.6629405!3e1?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D',
+  'floyd-hill': "https://www.google.com/maps/place/39%C2%B043\'21.0%22N+105%C2%B024\'43.7%22W/@39.722485,-105.41213,17z/data=!3m1!4b1!4m4!3m3!8m2!3d39.722485!4d-105.41213?entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D",
 };
 
 export default async function Redirect(props) {
