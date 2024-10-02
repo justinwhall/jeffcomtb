@@ -1,0 +1,3 @@
+# Green Mountain
+
+Green Mountain is a medium-sized trail network in the Western suburbs of Denver. Most trails are Green/Blue with a few Blue sections. Great place to bring advanced beginners to work on skills and stamina. Often very busy on weekends and one of the few close places you can ride somewhat reliably most of the year. Despite the proximity to Jefferson County trails, this park (known as William F. Hayden Park) is actually administered by Lakewood and open till 10PM every day. It's a popular choice for after-dark rides as most other trails are only open till "sunset".

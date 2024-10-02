@@ -1,6 +1,6 @@
 # Floyd Hill Open Space
 
-Start Location: [https://jeffcomtb.club/directions/floyd-hill](https://jeffcomtb.club/directions/floyd-hill)
+[https://jeffcomtb.club/directions/floyd-hill](https://jeffcomtb.club/directions/floyd-hill)
 
 This new trail system opened in the fall of 2019. We will ride everything that is open including the bike only directional downhill only section! The trails are not directional but your best bet is to ride them clockwise starting with a mellow climb to the west from the lot on Lower Loop. You'll have some additional climbing in the shade as you get to the Upper Loop and a good amount of downhill to look forward to once you get to the ridge.
 

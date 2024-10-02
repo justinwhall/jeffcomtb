@@ -1,4 +1,4 @@
-# Liar of the Bear
+# Lair of the Bear
 
 Start Location: [https://jeffcomtb.club/directions/liar-of-the-bear](https://jeffcomtb.club/directions/liar-of-the-bear)
 

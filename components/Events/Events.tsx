@@ -16,7 +16,7 @@ export async function Events() {
 
   return (
     <>
-      <Title mt={60} size={60} ta="center">Upcomming Group Rides</Title>
+      <Title mt={60} size={60} ta="center">Upcoming Group Rides</Title>
       <Box mt={20}>
         {filteredEvents.map((event: any) => (
           <Box key={event.id} mb={30} p={10} className={classes.event}>
