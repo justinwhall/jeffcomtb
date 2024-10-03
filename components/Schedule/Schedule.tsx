@@ -21,7 +21,7 @@ function pairStringsWithDates(strings: string[]) {
 
     while (isBefore(currentDate, endDate) || isEqual(currentDate, endDate)) {
         const rideData:RideData = {};
-        const dateString = format(currentDate, 'MM-dd-yyyy');
+        const dateString = format(currentDate, 'MM-dd-yy');
         const stringToPair = strings[stringIndex] || '[No more strings]';
 
         rideData.date = dateString;
