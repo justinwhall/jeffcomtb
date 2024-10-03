@@ -1,6 +1,7 @@
 import { format, addDays, nextTuesday, isBefore, isEqual } from 'date-fns';
 import { Anchor, Badge, Box, Center, Title } from '@mantine/core';
 import { RIDE_SCHEDULE } from '@/constants';
+import styles from './Schedule.module.css';
 
 type RideData = {
     date?: string;
@@ -53,8 +54,12 @@ export function Schedule() {
 
           return (
             <Box mb={5} key={index} opacity={pastEvent ? 0.6 : 1}>
-              <Anchor href={`/group-rides/${item.slug}`}>{item.date} ➔ {item.trail}</Anchor>
-              {pastEvent && <Badge ml={5} color="blue">Past Event</Badge>}
+              <Anchor
+                className={styles.groupRide}
+                href={`/group-rides/${item.slug}`}
+              >{item.date} ➔ {item.trail}
+              {pastEvent && <Badge ml={5} color="blue">Past</Badge>}
+              </Anchor>
             </Box>
           );
 })}
