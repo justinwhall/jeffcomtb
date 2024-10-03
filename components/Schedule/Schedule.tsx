@@ -1,6 +1,5 @@
 import { format, addDays, nextTuesday, isBefore, isEqual } from 'date-fns';
-import Link from 'next/link';
-import { Box, Center, Title } from '@mantine/core';
+import { Anchor, Badge, Box, Center, Title } from '@mantine/core';
 import { RIDE_SCHEDULE } from '@/constants';
 
 type RideData = {
@@ -47,13 +46,18 @@ export function Schedule() {
   return (
     <div>
        <Title id="all-rides" mt={60} size={60} ta="center">Full {new Date().getFullYear()} Schedule</Title>
-       <Center mb={20}>(Subject to change)</Center>
+       <Center mb={20}>(Subject to change. Start time TBD but generally between 5pm-6pm.)</Center>
       <div>
-        {pairedResults.map((item, index) => (
-            <Box mb={5} key={index}>
-              <Link href={`/group-rides/${item.slug}`}>{item.date} ➔ {item.trail}</Link>
+        {pairedResults.map((item, index) => {
+          const pastEvent = item.date ? new Date(item.date) < new Date() : false;
+
+          return (
+            <Box mb={5} key={index} opacity={pastEvent ? 0.6 : 1}>
+              <Anchor href={`/group-rides/${item.slug}`}>{item.date} ➔ {item.trail}</Anchor>
+              {pastEvent && <Badge ml={5} color="blue">Past Event</Badge>}
             </Box>
-          ))}
+          );
+})}
       </div>
     </div>
   );
