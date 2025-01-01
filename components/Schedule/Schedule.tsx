@@ -1,5 +1,5 @@
 import { format, addDays, nextTuesday, isBefore, isEqual } from 'date-fns';
-import { Anchor, Badge, Box, Center, Title } from '@mantine/core';
+import { Anchor, Badge, Box, Title } from '@mantine/core';
 import { RIDE_SCHEDULE } from '@/constants';
 import styles from './Schedule.module.css';
 
@@ -7,11 +7,12 @@ type RideData = {
     date?: string;
     trail?: string;
     slug?: string;
+    startTime?: string;
 };
 
-function pairStringsWithDates(strings: string[]) {
-    const dstStart = new Date(2024, 2, 10); // March 10, 2024
-    const dstEnd = new Date(2024, 10, 3); // November 3, 2024
+function pairStringsWithDates(strings: { trail: string, startTime: string }[]): RideData[] {
+    const dstStart = new Date(2025, 2, 9); // March 10, 2024
+    const dstEnd = new Date(2025, 10, 2); // November 3, 2024
 
     let currentDate = nextTuesday(dstStart);
     const endDate = nextTuesday(dstEnd);
@@ -22,9 +23,10 @@ function pairStringsWithDates(strings: string[]) {
     while (isBefore(currentDate, endDate) || isEqual(currentDate, endDate)) {
         const rideData:RideData = {};
         const dateString = format(currentDate, 'MM-dd-yy');
-        const stringToPair = strings[stringIndex] || '[No more strings]';
+        const stringToPair = strings[stringIndex].trail || '[No more strings]';
 
         rideData.date = dateString;
+        rideData.startTime = strings[stringIndex].startTime;
         rideData.trail = stringToPair;
         rideData.slug = stringToPair.toLowerCase().replace(/\s/g, '-');
 
@@ -47,7 +49,6 @@ export function Schedule() {
   return (
     <div>
        <Title id="all-rides" mt={60} size={60} ta="center">Full {new Date().getFullYear()} Schedule</Title>
-       <Center mb={20}>(Subject to change. Start time TBD but generally between 5pm-6pm.)</Center>
       <div>
         {pairedResults.map((item, index) => {
           const pastEvent = item.date ? new Date(item.date) < new Date() : false;
@@ -57,7 +58,7 @@ export function Schedule() {
               <Anchor
                 className={styles.groupRide}
                 href={`/group-rides/${item.slug}`}
-              >{item.date} ➔ {item.trail}
+              >{item.date} | {item.startTime} ➔ {item.trail}
               {pastEvent && <Badge ml={5} color="blue">Past</Badge>}
               </Anchor>
             </Box>

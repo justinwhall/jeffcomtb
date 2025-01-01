@@ -15,7 +15,7 @@ export function Footer() {
           fw={700}
         >
           Website hastily built by {' '}
-        <Anchor fw={800} href="https://justinwhall.com">http://justinwhall.com</Anchor>
+        <Anchor fw={800} href="https://justinwhall.com">https://justinwhall.com</Anchor>
         </Text>
     </Box>
   );

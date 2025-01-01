@@ -1,4 +1,4 @@
-import { Box, Button, Title } from '@mantine/core';
+import { Anchor, Box, Button, Center, Title } from '@mantine/core';
 import classes from './Events.module.css';
 import { formatDate } from '@/utils';
 
@@ -16,8 +16,14 @@ export async function Events() {
 
   return (
     <>
-      <Title mt={60} size={60} ta="center">Upcoming Group Rides</Title>
-      <Box mt={20}>
+      <Title mt={60} size={60} ta="center">RSVP on Strava</Title>
+      <Center mb={20}>(Rides are generally posted a week in advance. Full Schedule bellow)</Center>
+      {!filteredEvents.length ? (
+        <Box ta="center" mt={20} size="xl">
+          No rides posted to Strava right meow 🐱. Soon enough! <Anchor href="https://www.strava.com/clubs/132130" target="_blank">Join us on Strava</Anchor> to get the latest ride updates and RSVP to rides.
+        </Box>
+      ) : (
+        <Box mt={20}>
         {filteredEvents.map((event: any) => (
           <Box key={event.id} mb={30} p={10} className={classes.event}>
             <Title
@@ -41,7 +47,8 @@ export async function Events() {
             />
           </Box>
         ))}
-      </Box>
+        </Box>
+      )}
     </>
   );
 }

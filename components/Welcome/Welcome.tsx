@@ -22,11 +22,11 @@ export function Welcome() {
       ride schedule
       </Anchor>
       {' '}
-      below or read more about us
+      below, read more about us
       {' '}
       <Anchor href="#faq" size="lg">
       here
-      </Anchor>.
+      </Anchor>, and <Anchor href="https://www.strava.com/clubs/132130" target="_blank">join us on Strava</Anchor>  to get the latest ride updates and RSVP to rides.
       </Text>
     </>
   );
