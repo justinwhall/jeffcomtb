@@ -58,7 +58,7 @@ export const RIDE_SCHEDULE = [
   { trail: TRAIL_NAMES.virginiaCanyon, startTime: '5:45pm' },
   { trail: TRAIL_NAMES.floydHill, startTime: '5:45pm' },
   { trail: TRAIL_NAMES.whiteRanch, startTime: '5:45pm' },
-  { trail: TRAIL_NAMES.apex, startTime: '5:4530pm' },
+  { trail: TRAIL_NAMES.apex, startTime: '5:45pm' },
   { trail: TRAIL_NAMES.warrenGulch, startTime: '5:45pm' },
   { trail: TRAIL_NAMES.cubCreek, startTime: '5:45pm' },
   { trail: TRAIL_NAMES.goldenGateMuleDeer, startTime: '5:45pm' },
