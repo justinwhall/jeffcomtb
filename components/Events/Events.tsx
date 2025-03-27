@@ -39,7 +39,7 @@ export async function Events() {
             <Box fw={800}>{formatDate(event.upcoming_occurrences[0])}</Box>
             <Box mb={20}><Box display="inline-block" mr={5} fw={800}>Meeting Location:</Box>{event.address}</Box>
             <Button component="a" mr={10} href={`https://www.strava.com/clubs/${event.club_id}/group_events/${event.id}`} target="_blank">RSVP on Strava</Button>
-            <Button component="a" href={`https://jeffcomtb.club/directions/${event.title.toLowerCase().replace(/\s/g, '-')}`} target="_blank">Directions</Button>
+            {/* <Button component="a" href={`https://jeffcomtb.club/directions/${event.title.toLowerCase().replace(/\s/g, '-')}`} target="_blank">Directions</Button> */}
             <Box
               className={classes.description}
               mt={30}

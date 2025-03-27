@@ -51,7 +51,15 @@ export function Schedule() {
        <Title id="all-rides" mt={60} size={60} ta="center">Full {new Date().getFullYear()} Schedule</Title>
       <div>
         {pairedResults.map((item, index) => {
-          const pastEvent = item.date ? new Date(item.date) < new Date() : false;
+          const dateParts = item.date ? item.date.split('-') : null;
+          const eventDate = dateParts
+            ? new Date(
+                2000 + parseInt(dateParts[2], 10),
+                parseInt(dateParts[0], 10) - 1,
+                parseInt(dateParts[1], 10)
+              )
+            : null;
+          const pastEvent = eventDate ? eventDate < new Date() : false;
 
           return (
             <Box mb={5} key={index} opacity={pastEvent ? 0.6 : 1}>
