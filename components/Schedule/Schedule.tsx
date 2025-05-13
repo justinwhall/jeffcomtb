@@ -59,7 +59,21 @@ export function Schedule() {
                 parseInt(dateParts[1], 10)
               )
             : null;
-          const pastEvent = eventDate ? eventDate < new Date() : false;
+
+          // Parse the time and add it to the event date
+          const timeString = item.startTime || '';
+          const isPM = timeString.toLowerCase().includes('pm');
+          const timeParts = timeString.replace(/am|pm/i, '').split(':');
+
+          if (eventDate && timeParts.length > 0) {
+            let hours = parseInt(timeParts[0], 10);
+            if (isPM && hours < 12) hours += 12;
+            eventDate.setHours(hours);
+            eventDate.setMinutes(parseInt(timeParts[1] || '0', 10));
+          }
+
+          const now = new Date();
+          const pastEvent = eventDate ? eventDate < now : false;
 
           return (
             <Box mb={5} key={index} opacity={pastEvent ? 0.6 : 1}>
