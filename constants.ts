@@ -76,7 +76,7 @@ export const RIDE_SCHEDULE = [
   { trail: TRAIL_NAMES.dakotaRidge, startTime: '5:00pm' },
   { trail: TRAIL_NAMES.floydHill, startTime: '5:00pm' },
   { trail: TRAIL_NAMES.whiteRanch, startTime: '5:00pm' },
-  { trail: TRAIL_NAMES.apex, startTime: '5:00pm' },
+  { trail: TRAIL_NAMES.dakotaRidge, startTime: '5:00pm' },
   { trail: TRAIL_NAMES.threeSisters, startTime: '5:00pm' },
   { trail: TRAIL_NAMES.lairOfTheBear, startTime: '5:00pm' },
   { trail: TRAIL_NAMES.greenMountain, startTime: '5:30pm' },
