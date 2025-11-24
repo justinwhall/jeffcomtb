@@ -9,7 +9,7 @@ export default async function HomePage() {
   return (
     <>
         <Welcome />
-        <Events />
+        {/* <Events /> */}
         <Schedule />
         <FAQ />
         <Contact />
