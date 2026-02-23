@@ -1,4 +1,4 @@
-import { format, addDays, nextTuesday, isBefore, isEqual } from 'date-fns';
+import { addDays, format, isBefore, isEqual, nextTuesday } from 'date-fns';
 import { Anchor, Badge, Box, Title } from '@mantine/core';
 import { RIDE_SCHEDULE } from '@/constants';
 import styles from './Schedule.module.css';
@@ -10,31 +10,30 @@ type RideData = {
     startTime?: string;
 };
 
-function pairStringsWithDates(strings: { trail: string, startTime: string }[]): RideData[] {
-    const dstStart = new Date(2025, 2, 9); // March 10, 2024
-    const dstEnd = new Date(2025, 10, 2); // November 3, 2024
+function pairStringsWithDates(strings: { trail: string; startTime: string }[]): RideData[] {
+    const dstStart = new Date(2026, 2, 9); // March 9, 2026
+    const dstEnd = new Date(2026, 10, 2); // November 2, 2026
 
     let currentDate = nextTuesday(dstStart);
     const endDate = nextTuesday(dstEnd);
 
-    const result = [];
+    const result: RideData[] = [];
     let stringIndex = 0;
 
     while (isBefore(currentDate, endDate) || isEqual(currentDate, endDate)) {
-        const rideData:RideData = {};
+        const rideData: RideData = {};
         const dateString = format(currentDate, 'MM-dd-yy');
-        const stringToPair = strings[stringIndex].trail || '[No more strings]';
+        const stringToPair = strings[stringIndex].trail ?? '[No more strings]';
 
         rideData.date = dateString;
         rideData.startTime = strings[stringIndex].startTime;
         rideData.trail = stringToPair;
         rideData.slug = stringToPair.toLowerCase().replace(/\s/g, '-');
 
-        currentDate = addDays(currentDate, 7); // Move to next Tuesday
+        currentDate = addDays(currentDate, 7);
         stringIndex += 1;
 
         if (isEqual(currentDate, addDays(endDate, 7)) && stringIndex < strings.length) {
-            // If we've just passed the end date but still have strings, reset to the first date
             currentDate = nextTuesday(dstStart);
         }
 
