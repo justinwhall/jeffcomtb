@@ -1,19 +1,11 @@
-# Mantine Next.js template
 
-This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
-If you want to use pages router instead, see [next-pages-template](https://github.com/mantinedev/next-pages-template).
+## Getting started
 
-## Features
+**Node Version :**  20.X.X
 
-This template comes with the following features:
-
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
-
-## npm scripts
+1. Clone repo
+2. `npm ci`
+3. `npm run dev`
 
 ### Build and dev scripts
 
@@ -21,17 +13,13 @@ This template comes with the following features:
 - `build` – bundle application for production
 - `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 
-### Testing scripts
+## Changing the ride schedule
 
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `jest` – runs jest tests
-- `jest:watch` – starts jest watch
-- `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
+The ride schedule is the `RIDE_SCHEDULE` array in [constants.ts](constants.ts). Each entry is assigned to one Tuesday in the season: the **array index** is the **Tuesday number** (first Tuesday of the season = index 0, second = index 1, and so on through the DST season).
 
-### Other scripts
+**Example:** The ride at index 0 is the first Tuesday; the ride at index 4 is the fifth Tuesday. Swap those two entries to swap which trail is on the first vs. fifth Tuesday.
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
+## Deploying
+
+Simple. Merging to main deploys the website to vercel.
+
