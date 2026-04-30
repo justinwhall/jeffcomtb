@@ -1,4 +1,4 @@
-import { addDays, format, isBefore, isEqual, nextTuesday } from 'date-fns';
+import { addDays, addHours, format, isBefore, isEqual, nextTuesday } from 'date-fns';
 import { Anchor, Badge, Box, Title } from '@mantine/core';
 import { RIDE_SCHEDULE } from '@/constants';
 import styles from './Schedule.module.css';
@@ -71,8 +71,10 @@ export function Schedule() {
             eventDate.setMinutes(parseInt(timeParts[1] || '0', 10));
           }
 
+          // Keep showing the event as active for 4 hours after it started
+          const fourHoursAfterEvent = eventDate ? addHours(eventDate, 4) : null;
           const now = new Date();
-          const pastEvent = eventDate ? eventDate < now : false;
+          const pastEvent = fourHoursAfterEvent ? fourHoursAfterEvent < now : false;
 
           return (
             <Box mb={5} key={index} opacity={pastEvent ? 0.6 : 1}>
