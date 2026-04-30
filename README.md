@@ -21,5 +21,5 @@ The ride schedule is the `RIDE_SCHEDULE` array in [constants.ts](constants.ts). 
 
 ## Deploying
 
-Simple. Merging to main deploys the website to vercel.
+Simple! Merging to main deploys the website to vercel.
 
